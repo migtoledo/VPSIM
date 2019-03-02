@@ -1,9 +1,9 @@
 /*
 Project: Virtual Particles Simulator (VPS)
-Update: 26-Sept.-2018 dC
+Update: 17-Okt.-2018 dC
 By: Miguel Toledo González
 Version: v 1.0
-Code Serie: m9
+Code Serie: n7
 Programming Language: C++
 External Libraries: Allegro 5.2.4 for graphical output.
 License: GPL v3 - Free Software Foundation -
@@ -50,92 +50,103 @@ Audience: Testers, researchers, or students of physical sciences.
 #include <allegro5/allegro_primitives.h>
 using namespace std;
 
-// Project Headers
+// Project Headers A
 
-#include "rgbcolors.h"
-#include "structures1.h"
-#include "timestring.h"
-#include "filefunctions.h"
-#include "mathglobals.h"
-#include "systemglobals.h"
-#include "buttonglobals.h"
-#include "resolution.h"
-#include "initcolors.h"
-#include "initsystem.h"
-#include "graphicsmode.h"
-#include "welcome.h"
-#include "defbuffers.h"
-#include "loadhelp.h"
-#include "loadgraphics.h"
-#include "geometry.h"
+#include "hA0planckunits.h"
+#include "hA1rgbcolors.h"
+#include "hA2structures1.h"
+#include "hA3timestring.h"
+#include "hA4filefunctions.h"
+#include "hA5mathglobals.h"
+#include "hA6systemglobals.h"
+#include "hA7buttonglobals.h"
+#include "hA8resolution.h"
+#include "hA9initcolors.h"
+#include "hA10initsystem.h"
+#include "hA11graphicsmode.h"
+#include "hA12welcome.h"
+#include "hA13defbuffers.h"
+#include "hA14loadhelp.h"
+#include "hA15loadgraphics.h"
 
-// Class "Boundary"
+// Class "Boundary" B
 
-#include "defclassBoundary.h"
-#include "classBoundary1.h"
-#include "classBoundary2.h"
-#include "classBoundary3.h"
+#include "hB1defclassBoundary.h"
+#include "hB2classBoundary1.h"
+#include "hB3classBoundary2.h"
+#include "hB4classBoundary3.h"
 
-// User Numerical Input
+// User Numerical Input C
 
-#include "usernumericalinput.h"
+#include "hC1usernumericalinput.h"
 
-// Structures for Initial Configuration
+// Structures for Initial Configuration D
 
-#include "initstate.h"
+#include "hD1initstate.h"
 
-// Geometries of matrices of initial states
+#include "hD2sumistates.h"
 
-#include "initstategeometries.h"
+// Geometries of matrices of initial states E
 
-// Dynamical Elements of the Animation
+#include "hE1getpixstate.h"
 
-// Class "Pix"
+#include "hE2initstategeometrysegm.h"
 
-#include "defclassPix.h"
-#include "classPix1init.h"
-#include "classPix2exy.h"
-#include "classPix3boundary.h"
+#include "hE3initstategeometrycirc.h"
 
-// Class "procPix"
+#include "hE4initstategeometrydisc.h"
 
-#include "defclassprocPix.h"
+#include "hE5initstategeometryrect.h"
 
-// Class "pixM" - Global Pix Matrix - 
 
-#include "defclasspixM.h"
-#include "classpixM1init.h"
-#include "classpixM2loadpixm.h"
-#include "classpixM3setcolorscale.h"
-#include "classpixM4addpix.h"
-#include "classpixM5compute.h"
-#include "classpixM6run.h"
-#include "classpixM7getmass.h"
-#include "classpixM8draw.h"
+// Dynamical Elements of the Animation F
 
-// Class "Animation"
+// Class "Pix" F 
 
-#include "defclassAnimation.h"
-#include "classAnimation1init.h"
-#include "classAnimation2xx.h"
-#include "classAnimation3exy.h"
-#include "classAnimation4op.h"
-#include "classAnimation5wa.h"
-#include "classAnimation6ip.h"
-#include "classAnimation7save.h"
+#include "hF1defclassPix.h"
+#include "hF2classPix1init.h"
+#include "hF3classPix2exy.h"
+#include "hF4classPix3boundary.h"
 
-// MAIN
+// Class "procPix" G 
 
-#include "drawingop.h"
-#include "drawingip.h"
-#include "drawingwa.h"
-#include "drawing.h"
-#include "redrawing.h"
-#include "buttonactions.h"
+#include "hG1defclassprocPix.h"
 
-#include "cleaning.h"
-#include "mainflow.h"
-#include "threads.h"
+// Class "pixM" - Global Pix Matrix - H
+
+#include "hH1defclasspixM.h"
+#include "hH2classpixM1init.h"
+#include "hH3classpixM2loadpixm.h"
+#include "hH4classpixM3setcolorscale.h"
+#include "hH5classpixM4compute.h"
+#include "hH6classpixM5run.h"
+#include "hH7classpixM6getmass.h"
+#include "hH8classpixM7draw.h"
+
+// Class "Animation" I
+
+#include "hI1defclassAnimation.h"
+#include "hI2classAnimation1init.h"
+#include "hI3classAnimation2xx.h"
+#include "hI4classAnimation3exy.h"
+#include "hI5classAnimation4op.h"
+#include "hI6classAnimation5wa.h"
+#include "hI7classAnimation6ip.h"
+#include "hI8classAnimation7save.h"
+
+// MAIN J
+
+#include "hJ1drawingop.h"
+#include "hJ2drawingip.h"
+#include "hJ3drawingwa.h"
+#include "hJ4redrawing.h"
+#include "hJ5buttonactions.h"
+
+// K
+
+#include "hK1cleaning.h"
+#include "hK2mainflow.h"
+#include "hK3threads.h"
 
 // PROGRAM
 
